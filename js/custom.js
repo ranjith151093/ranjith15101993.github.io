@@ -51,9 +51,9 @@ $(".twitter").hover(function () {
 	$("#social-section").toggleClass("color-twitter")
 });
 
-/**$(".facebook").hover(function () {
+$(".facebook").hover(function () {
 	$("#social-section").toggleClass("color-facebook")
-});**//
+});
 
 $(".googleplus").hover(function () {
 	$("#social-section").toggleClass("color-googleplus")
