@@ -26,7 +26,6 @@
 
     <!-- Theme CSS -->
     <link href="css/custom.css" rel="stylesheet">
-	<link href="datepicker/css/datepicker.css" rel="stylesheet">
 	<link href="css/loader.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,6 +74,12 @@
                     </li>					
                     <li>
                         <a class="page-scroll" href="#social-section">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" onclick="changeCSS('custom',0)">Dark</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" onclick="changeCSS('light',0)">Light</a>
                     </li>
 					<li>
             </li>
@@ -492,16 +497,28 @@
     <script src="js/custom.js"></script>
 	<script src="js/easypiechart.js"></script>
 	
-	<script src="js/skills.js"></script>
-	<script src="datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="js/skills.js"></script>	
 	 <script>
         $(document).ready(function () {
            $(".modalDialog").attr('style', 'display :block');
             window.setTimeout(function () {
                 $(".modalDialog").attr('style', 'display :none');
-            }, 3000);
+            }, 3 00);
 
         })
+    </script>
+    <script>
+        function changeCSS(cssFile, cssLinkIndex) {
+            debugger;
+            var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+            var newlink = document.createElement("link");
+            newlink.setAttribute("rel", "stylesheet");
+            newlink.setAttribute("type", "text/css");
+            newlink.setAttribute("href", "css/" + cssFile + ".css");
+            //css / custom.css
+            document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+        }
     </script>
 
 </body>
