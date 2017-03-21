@@ -49,6 +49,10 @@
 				
                    
 
+                   
+
+
+
                     <div class="cssload-thecube">
                         <div class="cssload-cube cssload-c1"></div>
                         <div class="cssload-cube cssload-c2"></div>
@@ -74,15 +78,18 @@
                         <a class="page-scroll" href="#Skills">Skills</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#Personalize">Personalize</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#social-section">Contact</a>
-                    </li>                
-                    
+                    </li>
+
                     <li></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->			
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->		
+        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
@@ -122,19 +129,21 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-right: 15%; margin-left: 15%;">
             <div class="col-md-6 col-sm-6 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link scaleZoom" data-toggle="modal">
+                <a href="#portfolioModal1" class="portfolio-link PortfolioPreview" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <div class="project-name">
                                 WPF Template
                                
                            
+                           
                             </div>
                             <div class="project-category text-faded">
                                 Tool Design
                                
+                           
                            
                             </div>
                         </div>
@@ -147,17 +156,19 @@
                     </div> -->
             </div>
             <div class="col-md-6 col-sm-6 portfolio-item">
-                <a href="#portfolioModal2" class="portfolio-link scaleZoom" data-toggle="modal">
+                <a href="#portfolioModal2" class="portfolio-link PortfolioPreview" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <div class="project-name">
                                 Discussion Window
                                
                            
+                           
                             </div>
                             <div class="project-category text-faded">
                                 Website Design
                                
+                           
                            
                             </div>
                         </div>
@@ -166,17 +177,19 @@
                 </a>
             </div>
             <div class="col-md-6 col-sm-6 portfolio-item">
-                <a href="#portfolioModal3" class="portfolio-link scaleZoom" data-toggle="modal">
+                <a href="#portfolioModal3" class="portfolio-link PortfolioPreview" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <div class="project-name">
                                 Flight Model
                                
                            
+                           
                             </div>
                             <div class="project-category text-faded">
                                 Website Design
                                
+                           
                            
                             </div>
                         </div>
@@ -185,17 +198,19 @@
                 </a>
             </div>
             <div class="col-md-6 col-sm-6 portfolio-item">
-                <a href="#portfolioModal4" class="portfolio-link scaleZoom" data-toggle="modal">
+                <a href="#portfolioModal4" class="portfolio-link PortfolioPreview" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <div class="project-name">
                                 My Portfolio
                                
                            
+                           
                             </div>
                             <div class="project-category text-faded">
                                 Responsive Design
                                
+                           
                            
                             </div>
                         </div>
@@ -316,22 +331,23 @@
             </div>
         </div>
     </section>
-	
-	<!-- Skills Section -->
-    <section id="Personalize" style="background-color: #da5454">
+
+    <!-- Skills Section -->
+    <section id="Personalize" style="background-color: rgba(84, 218, 161, 0.65)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading theme">Personalize</h2>
+                    <h3 class="section-subheading">Select your theme!</h3>
                 </div>
             </div>
 
-            <div class="row" style="margin-top:5%;">
-				<img class="BackgroundPreview" src="img/blackTheme.png" onclick="darkTheme();" style="width:45%;"/>
-				<img class="BackgroundPreview" src="img/whiteTheme.png" onclick="lightTheme();" alt="" style="width:45%;"/>          
+            <div class="row" style="margin-left: 10%;">
+                <img class="BackgroundPreview" src="img/blackTheme.png" onclick="darkTheme();" style="width: 45%;" />
+                <img class="BackgroundPreview" src="img/whiteTheme.png" onclick="lightTheme();" alt="" style="width: 45%;" />
+
 
             </div>
-        </div>
     </section>
 
 
@@ -364,6 +380,7 @@
                 <div class="col-md-12">
                     © Ranjith Kumar 2016
 				
+               
                
                
                 </div>
@@ -543,10 +560,12 @@
 
         })
     </script>
-   
+
     <script>
         function darkTheme() {
-            document.getElementById('mainNav').style.transition = "all ease .8s";
+            $("#mainNav").css('-webkit-transition', 'all ease .8s');
+            $("#mainNav").css('-moz-transition', 'all ease .8s');
+            $("#mainNav").css('transition', 'all ease .8s');
             $(".navbar-custom").css('backgroundColor', 'black');
             $(".navbar-custom .nav li a").css('color', 'white');
             $(".footerStyle").css('backgroundColor', 'black');
@@ -559,7 +578,9 @@
         }
 
         function lightTheme() {
-            document.getElementById('mainNav').style.transition = "all ease .8s";
+            $("#mainNav").css('-webkit-transition', 'all ease .8s');
+            $("#mainNav").css('-moz-transition', 'all ease .8s');
+            $("#mainNav").css('transition', 'all ease .8s');
             $(".navbar-custom").css('backgroundColor', 'white');
             $(".navbar-custom .nav li a").css('color', 'black');
             $(".footerStyle").css('backgroundColor', 'white');
